@@ -30,3 +30,37 @@ body {
 h2 {
     font-size: 2rem;
 }
+
+/* ==== Layout: header ==== */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 4px 12px hsl(0, 0%, 0%, 0.3);
+}
+
+.nav__logo {
+    font-size: 3rem;
+    color: var(--color-primary-light);
+}
+
+.nav__links {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--color-accent);
+    transition: color 0.2s;
+}
+
+.nav__link:hover {
+    color: var(--color-primary);
+}
+
