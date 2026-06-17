@@ -4,14 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColorFly</title>
+
+    <!-- Enlace a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+
     <!-- Enlace archivo CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    
+
 </head>
 <body>
+
+    <!-- Header con navegación -->
+    <header>
+        <nav class="nav">
+            <span class="nav__logo">ColorFly</span>
+            <ul class="nav__links">
+                <li><a class="nav__link" href="#generador">Generador</a></li>
+                <li><a class="nav__link" href="#miscolores">Mis colores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Navegación principal -->
     
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Generador de colores -->
+        <section id="generador">
+            <h2>Paleta de Colores</h2>
+            <section class="swatches" id="swatches">
+                <article class="swatch">
+                    <div class="swatch__color"></div>
+                    <div class="swatch__info">
+                        <p class="swatch__hex">#FFFFFF</p>
+                        <button class="swatch__copy" aria-label="Copiar color">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                        </svg>
+                        </button>
+                    </div>
+                </article>
+                <article class="swatch">
+                    <div class="swatch__color"></div>
+                    <div class="swatch__info">
+                        <p class="swatch__hex">#FFFFFF</p>
+                        <button class="swatch__copy" aria-label="Copiar color">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                        </svg>
+                        </button>
+                    </div>
+                </article>
+                <article class="swatch">
+                    <div class="swatch__color"></div>
+                    <div class="swatch__info">
+                        <p class="swatch__hex">#FFFFFF</p>
+                        <button class="swatch__copy" aria-label="Copiar color">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                        </svg>
+                        </button>
+                    </div>
+                </article>
+                <article class="swatch">
+                    <div class="swatch__color"></div>
+                    <div class="swatch__info">
+                        <p class="swatch__hex">#FFFFFF</p>
+                        <button class="swatch__copy" aria-label="Copiar color">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                        </svg>
+                        </button>
+                    </div>
+                </article>
+                <article class="swatch">
+                    <div class="swatch__color"></div>
+                    <div class="swatch__info">
+                        <p class="swatch__hex">#FFFFFF</p>
+                        <button class="swatch__copy" aria-label="Copiar color">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                        </svg>
+                        </button>
+                    </div>
+                </article>
+        </section>
+        <section class="controls">
+            <button class="boton_paleta" id="boton_paleta">Generar Paleta</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>ColorFly &copy; 2026. Todos los derechos reservados.</p>
+    </footer>
 </body>
 
-<!-- Script JavaScript -->
-<script src="./script/script.js"></script>
+<!-- Enlace archivo JavaScript -->
+
+<script src="./scrip/script.js"></script>
 </html>
