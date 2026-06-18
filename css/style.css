@@ -11,6 +11,7 @@
     --color-primary-light: hsl(315, 85%, 85%);
     --color-primary-dark: hsl(315, 85%, 25%);
     --color-accent: hsl(35, 90%, 55%);
+    --color-accent-dark: hsl(35, 90%, 40%);
 
     --color-background: hsl(0, 30%, 80%);
     --color-border: hsl(0, 30%, 90%);
@@ -33,6 +34,7 @@ body {
 h1 {
     font-size: 4rem;
     text-align: center;
+    text-shadow: 0 2px 4px var(--color-text-);
 }
 
 /* ==== Layout: header ==== */
@@ -91,6 +93,7 @@ main {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
     gap: 0;
+    background-color: var(--color-background);
 }
 
 /* ==== layout: swatch ==== */
@@ -108,7 +111,7 @@ main {
 }
 
 .swatch:hover {
-    transform: translateY(-10px)
+    transform: translateY(-20px)
 }
 
 .swatch__info {
@@ -140,12 +143,38 @@ main {
     opacity: 1;
     transform: scale(1);
 }
+
+/* ==== Layout: button palette ==== */
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: none;
+}
+
+.boton_paleta {
+    flex: 1;
+    background: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.8rem;
+    background-color: var(--color-accent);
+    transition: 0.2s;
+    font-size: 2rem;
+    color: var(--color-border);
+    text-shadow: 0 2px 6px var(--color-text-sauve);
+    font-family: "Bangers", sans-serif;
+}
+
+.boton_paleta:hover {
+    background-color: var(--color-accent-dark);
+}
+
+
 /* ===== Layout: footer ===== */
 footer {
     padding: 1.5rem;
     text-align: center;
     color: var(--color-text-sauve);
-    border-top: 1px solid var(--color-border);
-    margin-top: 2rem;
 }
-
