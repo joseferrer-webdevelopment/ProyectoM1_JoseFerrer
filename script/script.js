@@ -28,8 +28,26 @@ function generarColorFinal() {
 
 // 3. Función para pintar los 5 swatches con colores generados
 
+function colorRandom() {
+    swatches.forEach(function(swatch) {
+        const color = generarColorFinal();
+        swatch.style.backgroundColor = color.hsl;
+        swatch.querySelector(".swatch__hex")
+        .textContent = color.hex;
+    });
+}
 // 4. Al cargar la página, pintar la paleta inicial
 
+colorRandom();
+
 // 5. Al hacer clic en el botón, generar nueva paleta
+
+if (boton) {
+    boton.addEventListener("click", function() {
+        colorRandom();
+    });
+} else{
+    console.log("No encontré el botón");
+} 
 
 // 6. Al hacer clic en el ícono de copiar, copiar HEX al portapapeles
