@@ -214,3 +214,35 @@ footer {
   text-align: center;
   color: var(--color-text-sauve);
 }
+
+/* ==== Responsive: mobile (max-width 480px) ==== */
+
+@media (max-width: 480px){
+  .nav__links{
+    font-size: 1rem;
+  }
+    .swatch__copy svg {
+        transition: none;
+        opacity: 1;
+        color: var(--color-border);
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .swatch__hex{
+      writing-mode: vertical-lr;
+      font-size: 1.5rem;
+    }
+
+    .control__label {
+      font-size: 1rem;
+    }
+
+    .control__group {
+      flex: 4;
+    }
+
+    .boton_paleta {
+      flex: 6;
+    }
+  }
