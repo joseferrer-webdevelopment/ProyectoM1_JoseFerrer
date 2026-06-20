@@ -18,16 +18,28 @@ const boton = document.getElementById("boton_paleta");
 const swatches = document.getElementById("swatches");
 const select = document.getElementById("cantidad");
 
-// 2. Función para generar un color HSL aleatorio y convertirlo a HEX
+// 2. Función para generar un color HSL aleatorio y convertirlo a HEX "Se utiliza cloud code para que no haya repetecion de colores"
 
-function generarColorFinal() {
-  const h = Math.round(Math.random() * 360);
+function generarColorFinal(matricesUsados) {
+  let h;
+  let intentos = 0;
+  const distanciaMinima = 30; // grados mínimos de diferencia entre matices
+
+  do {
+    h = Math.round(Math.random() * 360);
+    intentos++;
+  } while (
+    matricesUsados.some(function (usado) {
+      return Math.abs(h - usado) < distanciaMinima;
+    }) && intentos < 20
+  );
+
   const hsl = "hsl(" + h + ", 70%, 60%)";
   const hex = hslToHex(h, 70, 60);
-  return { hsl, hex };
+  return { hsl, hex, h };
 }
 
-// 3. Función para generar y renderizar la paleta de colores
+// 3. Función para generar y renderizar la paleta de colores "Se utiliza cloud code para que no haya repetecion de colores"
 
 function colorRandom() {
   //limpiar contenedor
@@ -41,9 +53,12 @@ function colorRandom() {
 
   swatches.style.gridTemplateColumns = `repeat(${cantidad}, 1fr)`;
 
+  const matricesUsados = []; // nuevo: lleva registro de los matices de esta tanda
+
   for (let i = 0; i < cantidad; i++) {
     // Generar un color
-    const color = generarColorFinal();
+    const color = generarColorFinal(matricesUsados);
+    matricesUsados.push(color.h); // guarda el matiz recién generado
 
     // Crear el swatch
     const swatch = document.createElement("article");
