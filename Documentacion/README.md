@@ -19,6 +19,7 @@ ColorFly es una landing page interactiva inspirada en herramientas como Coolors.
 - Microfeedback visual al copiar ("¡Copiado!")
 - Algoritmo de generación que evita colores visualmente similares en la misma paleta
 - Diseño accesible: labels asociados, foco visible por teclado, contraste verificado
+- Diseño responsive optimizado para dispositivos móviles, con layout adaptado para pantallas pequeñas.
 
 ## Tecnologías utilizadas
 
@@ -59,6 +60,9 @@ Este proyecto está desplegado con GitHub Pages directamente desde la rama `main
 - Se implementó un algoritmo de distancia mínima entre matices (hue) para evitar que dos colores generados en la misma paleta se vean visualmente idénticos
 - El layout utiliza una cadena de Flexbox anidada (`main` → `#generador` → `.swatches`) para que la paleta ocupe el 100% del alto disponible sin generar scroll
 - Se priorizó la accesibilidad con outline visible en `:focus` para navegación por teclado, y labels correctamente asociados a los controles de formulario
+-Se implementó un breakpoint único en 480px para adaptar la interfaz a dispositivos móviles, redistribuyendo las proporciones de flexbox entre el título, la paleta y los controles para que el contenido completo sea visible sin necesidad de scroll
+-Se resolvió un bug conocido de Safari en iOS relacionado con la unidad `100vh`, que no calcula correctamente el alto visible cuando la barra de direcciones del navegador cambia de tamaño dinámicamente; se solucionó utilizando la unidad moderna `100dvh` (dynamic viewport height)
+-En mobile se priorizó la usabilidad táctil sobre la legibilidad completa del código HEX, mostrando el ícono de copiar de forma más grande y visible (sin depender del estado `:hover`, inexistente en pantallas táctiles), bajo la premisa de que el usuario prioriza copiar el color antes que leerlo letra por letra
 
 ## Mejoras futuras
 
@@ -66,7 +70,7 @@ Este proyecto está desplegado con GitHub Pages directamente desde la rama `main
 - Guardado de paletas favoritas usando localStorage
 - Animaciones adicionales en la transición entre paletas
 - Alternar entre formato HEX y RGBA para mostrar el código de color
-- Versión responsive optimizada para dispositivos móviles
+- Versión responsive optimizada para tablets
 
 ## Estructura del proyecto
 
